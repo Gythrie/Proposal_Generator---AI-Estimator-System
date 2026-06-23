@@ -1,0 +1,56 @@
+{
+  "input_dir": "data/sample_proposals",
+  "output_path": "outputs/canonical_sections.json",
+  "cluster_audit_path": "outputs/cluster_audit.txt",
+
+  "heading_styles": ["Heading 1", "Heading 2", "Heading 3", "Title"],
+  "valid_file_extensions": [".docx"],
+
+  "embedding_model": "BAAI/bge-large-en-v1.5",
+  "embedding_device": "cpu",
+  "embedding_batch_size": 16,
+
+  "normalization": {
+    "remove_numeric_prefix": true
+  },
+
+  "noise_filters": {
+    "min_heading_length": 3,
+    "max_heading_length": 120,
+    "max_words": 12,
+    "drop_person_names": true,
+    "drop_signature_blocks": true,
+    "drop_proposal_titles": true,
+    "drop_cover_page_metadata": true,
+    "drop_material_item_lines": true,
+    "signature_keywords": ["authorized by","signature","print name","date","sincerely","regards"],
+    "proposal_title_keywords": ["proposal","bid proposal","project proposal","commercial flooring bid","flooring installation proposal"],
+    "cover_page_keywords": ["prepared for","prepared by","submitted to","submitted by","confidential","table of contents"],
+    "material_line_keywords": ["sq ft","sqft","linear ft","per unit","unit price","qty","quantity"]
+  },
+
+  "clustering": {
+    "distance_threshold": 0.40,
+    "metric": "cosine",
+    "linkage": "average"
+  },
+
+  "track2": {
+    "llm_model": "qwen2.5:7b",
+    "llm_base_url": "http://localhost:11434"
+  },
+  "track3": {
+  "llm_model": "qwen2.5:7b",
+  "llm_base_url": "http://localhost:11434",
+  "readability_min_score": 30
+},
+
+  "paths": {
+    "proposal_output": "outputs/generated_proposal.docx",
+    "validated_output": "outputs/validated_proposal.docx",
+    "completeness_report": "outputs/completeness_report.txt",
+    "consistency_report": "outputs/consistency_report.txt",
+    "readability_report": "outputs/readability_report.txt"
+
+  }
+}

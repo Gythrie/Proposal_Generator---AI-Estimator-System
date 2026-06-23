@@ -1,0 +1,19 @@
+{
+  "_description": "Static boilerplate text. Client can edit these without touching code.",
+  "terms": [
+    "Proposal valid for 30 days from date of submission.",
+    "A 50% deposit is required upon contract execution; balance due upon project completion.",
+    "All work to be performed during normal business hours unless otherwise agreed in writing.",
+    "Owner to provide unobstructed access to work areas 48 hours prior to scheduled installation.",
+    "Any changes to scope will be documented via written change order prior to execution.",
+    "All materials are first quality. Labour is warranted for one year from date of installation.",
+    "Extra work not specified herein will be charged at an additional cost.",
+    "This proposal expires 30 days from date of issue."
+  ],
+  "closing": "We appreciate the opportunity to submit this proposal and look forward to working with you.",
+  "signature_block": {
+    "name": "Senior Estimator",
+    "company": "Apex Flooring Solutions, Inc.",
+    "phone": "(713) 445-8800"
+  }
+}

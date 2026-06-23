@@ -1,0 +1,13 @@
+{
+  "_description": "Manually locked template schema based on Track 1 output. Edit sections here to add/remove proposal sections.",
+  "sections": [
+    { "id": "header",           "label": "Header",           "required": true,  "llm": false, "note": "Client name, project, date, bid number — filled from metadata, no LLM" },
+    { "id": "scope_of_work",    "label": "Scope of Work",    "required": true,  "llm": true,  "note": "LLM writes narrative from Team 1 scope JSON" },
+    { "id": "inclusions",       "label": "Inclusions",       "required": true,  "llm": true,  "note": "LLM extracts what IS included from scope model" },
+    { "id": "exclusions",       "label": "Exclusions",       "required": true,  "llm": true,  "note": "LLM derives from Team 1 gaps + Team 2 conflicts" },
+    { "id": "qualifications",   "label": "Qualifications",   "required": true,  "llm": true,  "note": "LLM writes assumptions and conditions" },
+    { "id": "pricing_summary",  "label": "Pricing Summary",  "required": true,  "llm": false, "note": "Pulled directly from Team 2 cost estimate — no LLM" },
+    { "id": "alternate_pricing","label": "Alternate Pricing","required": false, "llm": true,  "note": "LLM writes alternate descriptions if alternates exist" },
+    { "id": "terms",            "label": "Terms and Conditions","required": true,"llm": false,"note": "Static boilerplate from config — no LLM" }
+  ]
+}
